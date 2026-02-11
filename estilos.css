@@ -1,0 +1,228 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Times New Roman', Times, serif;
+  background-color: rgb(223, 156, 240);
+  line-height: 1.6;
+  color: white;
+}
+
+.contenido{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  width: 100%;
+  background: linear-gradient(135deg, purple 0%, #e2dded 100%);
+}
+
+.portada{
+  background: #a896af;
+  backdrop-filter: blur(10px);
+  border: 1px solid #EDDFEF;
+  padding: 40px 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 25px 50px -12px black;
+  animation: fadeIn 1.5s ease-out;
+}
+@keyframes fadeIn{
+  from {opacity: 0; transform: translateY(20px);}
+  to{opacity: 1; transform: translateY(0);}
+}
+
+.portada img{
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px blue;
+}
+h1{
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: 5px;
+  color: blue;
+}
+
+p{
+  font-size: 2rem;
+  color: #2c2947;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+hr{
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #EDDFEF, transparent);
+  margin-bottom: 20px;
+}
+.btn-link{
+  display: block;
+  background-color: #e2dded;
+  color: rgb(229, 144, 236);
+  text-decoration: none;
+  padding: 16px;
+  margin: 12px 0;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+  border: 1px solid;
+}
+.btn-link:active{
+  transform: scale(0.95);
+  background-color: #ad82b3;
+  color: rgb(236, 105, 204);
+}
+
+@media (max-height: 500px){
+  .contenido{
+    padding: 40px 20px;
+    min-height: auto;
+  }
+}
+
+section{
+ padding: 40px 20px;
+ max-width: 450px;
+ margin: 0 auto;
+}
+h2{
+  font-size: 1.2rem;
+  color: #000000;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.contenedor-etiquetas{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+.etiqueta{
+  background: #1e293b;
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: 1px solid #f8fafc;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+.proyectos-slider{
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
+.proyectos-slider::-webkit-scrollbar {display: none;}
+
+.tarjeta-proyecto{
+  flex: 0 0 160px;
+  background: rgb(216, 16, 243);
+  border-radius: 15px;
+  padding: 10px;
+  scroll-snap-align: start;
+}
+.tarjeta-proyecto img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.tarjeta-proyecto p{
+  font-size: 0.90rem;
+  color: #000000;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.formulario input, .formulario textarea{
+    width: 100%;
+    background: rgb(224, 199, 241);
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+.btn-enviar{
+    width: 100%;
+    background: rgb(191, 69, 207);
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #1e293b;
+    cursor: pointer;
+    font-size: 1rem; color: #fff;
+}
+.pie-pagina{
+    background: black;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 20px;
+    border-top: 1px solid white;
+}
+.pie-pagina p{
+    font-size: 0.8rem;
+    color: #325564;
+    margin-bottom: 5px;
+}
+.pie-pagina .version{
+    font-size: 0.7rem;
+    color: #0f4c85;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.redes-sociales{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.redes-sociales span{
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background: linear-gradient(90deg, #49b0db, #2d4a57);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    border: #fff;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
